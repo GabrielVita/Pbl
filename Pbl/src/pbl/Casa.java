@@ -69,6 +69,8 @@ public class Casa {
         this.portinha = portinha;
     }
     
-    
+    public Casa(){
+        portinha=new ArrayList<>();
+    }
     
 }
