@@ -45,15 +45,16 @@ public class Pbl {
             }
             
             edificio1.addPortas(porta1); 
-            edificio1.numPortas();
-            edificio1.numPortasAberta();
+            
         }
          
-           
+           edificio1.numPortas();
+           edificio1.numPortasAberta();
          
          int c=0;
-        while(c<edificio1.getAndares().size()){
-            JOptionPane.showMessageDialog(null,"Info Andares:\n\n" + "Quantidade de andares:\n" + edificio1.getQuantAndares() + "\n Nome do andar:\n" + edificio1.getAndares().get(c) ) ;
+        while(c<edificio1.getNomeAndares().size()){
+            JOptionPane.showMessageDialog(null,"Info Andares:\n\n" + "Quantidade de andares:\n" + 
+                    edificio1.getQuantAndares() + "\n Nome do andar:\n" + edificio1.getNomeAndares().get(c) ) ;
         c++;
         }
          int d=0;

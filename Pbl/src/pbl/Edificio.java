@@ -36,13 +36,15 @@ public class Edificio {
         this.quantAndares = nomeAndares.size();
     }
 
-    public ArrayList<String> getAndares() {
+    public ArrayList<String> getNomeAndares() {
         return nomeAndares;
     }
 
-    public void setAndares(ArrayList<String> andares) {
-        this.nomeAndares = andares;
+    public void setNomeAndares(ArrayList<String> nomeAndares) {
+        this.nomeAndares = nomeAndares;
     }
+
+   
     
     public Edificio(){
         portola= new ArrayList<>();
