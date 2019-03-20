@@ -13,12 +13,40 @@ import java.util.ArrayList;
  */
 public class Edificio {
     private String cor;
-    private String nomeAndar;
+    
     private int quantPortas;
+    private int quantAndares;
     private ArrayList<Porta> portola;
+    private ArrayList<String> nomeAndares;
+    private int portasAbertas;
+
+    public int getPortasAbertas() {
+        return portasAbertas;
+    }
+
+    public void setPortasAbertas(int portasAbertas) {
+        this.portasAbertas = portasAbertas;
+    }
+
+    public int getQuantAndares() {
+        return quantAndares;
+    }
+
+    public void setQuantAndares(int quantAndares) {
+        this.quantAndares = nomeAndares.size();
+    }
+
+    public ArrayList<String> getAndares() {
+        return nomeAndares;
+    }
+
+    public void setAndares(ArrayList<String> andares) {
+        this.nomeAndares = andares;
+    }
     
     public Edificio(){
         portola= new ArrayList<>();
+        nomeAndares=new ArrayList<>();
     }
 
     public String getCor() {
@@ -29,13 +57,7 @@ public class Edificio {
         this.cor = cor;
     }
 
-    public String getNomeAndar() {
-        return nomeAndar;
-    }
-
-    public void setNomeAndar(String nomeAndar) {
-        this.nomeAndar = nomeAndar;
-    }
+   
 
     public int getQuantPortas() {
         return quantPortas;
@@ -52,5 +74,26 @@ public class Edificio {
     public void setPortola(ArrayList<Porta> portola) {
         this.portola = portola;
     }
-    
+     public void addPortas(Porta porta){
+        portola.add(porta);
+        
+    }
+     public void addAndar(String andar){
+         nomeAndares.add(andar);
+     }
+      public void numAndares(){
+         this.quantAndares=nomeAndares.size();
+    }
+    public void numPortas(){
+         this.quantPortas=portola.size();
+    }
+     public void numPortasAberta(){
+        
+        for(int i=0; i<portola.size(); i++){
+            
+            if(portola.get(i).isStatus()== true){
+                this.portasAbertas++; 
+            }
+        }
+    }
 }
